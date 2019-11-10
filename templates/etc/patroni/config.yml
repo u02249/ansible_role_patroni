@@ -42,9 +42,7 @@ bootstrap:
   - data-checksums
 
   pg_hba:  # Add following lines to pg_hba.conf after running 'initdb'
-{% for host in groups[all] %}
-  - host replication replicator {{ hostvars[host]['patroni_ip'] }}/32 md5
-{% endfor %}
+  - host replication replicator 10.128.0.0/32 md5
   - host replication replicator 127.0.0.1/32 md5
   - host all all 0.0.0.0/0 md5
   #- hostssl all all 0.0.0.0/0 md5
