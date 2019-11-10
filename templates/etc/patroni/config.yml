@@ -61,7 +61,7 @@ bootstrap:
 postgresql:
   listen: 0.0.0.0:{{ patroni_postgres_port }}
   connect_address: localhost:{{ patroni_postgres_port }}
-  data_dir: {{ patroni_datadir_prefix }}/{{ patroni_node_name }}
+  data_dir: {{ patroni_datadir_prefix }}/{{ ansible_host }}
 #  bin_dir:
   pgpass: /tmp/pgpass0
   authentication:
