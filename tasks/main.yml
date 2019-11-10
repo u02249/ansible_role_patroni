@@ -28,8 +28,8 @@
 
 - name: create config and templates file
   template:
-    src: {{item}}
-    des: /{{item}}
+    src: "{{item}}"
+    des: "/{{item}}"
     state: present
   with_items:
     - etc/patroni/config.yml
