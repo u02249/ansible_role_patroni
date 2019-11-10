@@ -33,8 +33,20 @@
   with_items:
     - etc/patroni/config.yml
 
+- name: enable and restart patroni service
+  service:
+    name: patroni
+    enabled: yes
+    state: restarted
+
 - name: enable and start patroni service
   service:
     name: patroni
+    enabled: yes
+    state: started
+
+- name: enable and start etcd service
+  service:
+    name: etcd
     enabled: yes
     state: started
