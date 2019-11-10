@@ -29,7 +29,7 @@
 - name: create config and templates file
   template:
     src: "{{item}}"
-    des: "/{{item}}"
+    dest: "/{{item}}"
   with_items:
     - etc/patroni/config.yml
 
