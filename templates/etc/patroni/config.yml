@@ -35,11 +35,6 @@ bootstrap:
         max_connections: {{ patroni_pg_max_connections }}
         max_replication_slots: 5
         wal_log_hints: "on"
-        archive_mode: "on"
-        archive_timeout: 1800s
-        archive_command: {{ patroni_archive_command }}
-      recovery_conf:
-        restore_command: {{ patroni_restore_command }}
 
   # some desired options for 'initdb'
   initdb:  # Note: It needs to be a list (some options need values, others are switches)
