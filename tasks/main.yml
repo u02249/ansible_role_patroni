@@ -30,7 +30,6 @@
   template:
     src: "{{item}}"
     des: "/{{item}}"
-    state: present
   with_items:
     - etc/patroni/config.yml
 
