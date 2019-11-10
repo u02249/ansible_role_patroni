@@ -1,2 +1,11 @@
 ---
 # vars file for patroni
+patroni_scope: aparu
+patroni_rest_user: esverchkov
+patroni_rest_password: SD56bn78!
+patroni_pg_max_connections: 450
+patroni_postgres_port: 5433
+patroni_replicator_password: SD56bn78!
+patroni_postgres_password: SD56bn78!
+patroni_pg_path: /usr/bin/
+etcd_ip: localhost
