@@ -12,7 +12,7 @@ restapi:
     password: {{ patroni_rest_password }}
 
 etcd:
-  host: {{ ansible_host }}:2379
+  host: {{ inventory_hostname }}:2379
 
 bootstrap:
   # this section will be written into Etcd:/<namespace>/<scope>/config after initializing new cluster
@@ -60,7 +60,7 @@ bootstrap:
 
 postgresql:
   listen: 0.0.0.0:{{ patroni_postgres_port }}
-  connect_address: {{ ansible_host }}:{{ patroni_postgres_port }}
+  connect_address: localhost:{{ patroni_postgres_port }}
   data_dir: {{ patroni_datadir_prefix }}/{{ patroni_node_name }}
 #  bin_dir:
   pgpass: /tmp/pgpass0

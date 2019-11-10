@@ -9,4 +9,5 @@ patroni_replicator_password: SD56bn78!
 patroni_postgres_password: SD56bn78!
 patroni_pg_path: /usr/bin/
 patroni_admin_password: SD56bn78!
+patroni_datadir_prefix: aparu
 etcd_ip: localhost
