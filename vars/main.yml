@@ -8,4 +8,5 @@ patroni_postgres_port: 5433
 patroni_replicator_password: SD56bn78!
 patroni_postgres_password: SD56bn78!
 patroni_pg_path: /usr/bin/
+patroni_admin_password: SD56bn78!
 etcd_ip: localhost
