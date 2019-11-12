@@ -32,10 +32,11 @@
     dest: "/{{item}}"
   with_items:
     - etc/patroni/config.yml
-    - etc/profile.d/etcd.sh
+    - lib/systemd/system/etcd.service
+    - etc/etcd/etcd.conf.yml
 
 - name: Changing perm of "/etc/profile.d/etcd.sh", adding "+x"
-  file: dest=/etc/profile.d/etcd.sh mode=a+x
+  file: dest=/etc/profile.d/etcd.sh mode=a+x state=absent
 
 - name: enable and restart patroni service
   service:
