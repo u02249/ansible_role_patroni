@@ -32,6 +32,7 @@
     dest: "/{{item}}"
   with_items:
     - etc/patroni/config.yml
+    - etc/profile.d/etcd.sh
 
 - name: enable and restart patroni service
   service:
@@ -44,6 +45,12 @@
     name: patroni
     enabled: yes
     state: started
+
+- name: enable and restart etcd service
+  service:
+    name: etcd
+    enabled: yes
+    state: restarted
 
 - name: enable and start etcd service
   service:
