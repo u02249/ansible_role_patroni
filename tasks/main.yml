@@ -41,6 +41,10 @@
     - lib/systemd/system/etcd.service
     - etc/etcd/etcd.conf.yml
 
+
+- name:
+  command: systemctl daemon-reload
+
 - name: Changing perm of "/etc/profile.d/etcd.sh", adding "+x"
   file: dest=/etc/profile.d/etcd.sh mode=a+x state=absent
 
