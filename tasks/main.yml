@@ -26,6 +26,12 @@
     path: /etc/patroni
     state: directory
 
+
+- name: ansible create config directory patroni
+  file:
+    path: /etc/etcd
+    state: directory
+
 - name: create config and templates file
   template:
     src: "{{item}}"
