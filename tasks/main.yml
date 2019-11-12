@@ -33,7 +33,7 @@
     state: directory
 
 - name:
-  file: path=/var/etcd owner=etcd
+  file: path=/var/etcd owner=etcd state=directory
 
 - name: create config and templates file
   template:
