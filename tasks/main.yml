@@ -42,12 +42,8 @@
     - etc/etcd/etcd.conf.yml
     - etc/hosts
 
-
 - name:
   command: systemctl daemon-reload
-
-- name: Changing perm of "/etc/profile.d/etcd.sh", adding "+x"
-  file: dest=/etc/profile.d/etcd.sh mode=a+x state=absent
 
 - name: enable and restart patroni service
   service:
