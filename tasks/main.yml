@@ -32,6 +32,9 @@
     path: /etc/etcd
     state: directory
 
+- name:
+  file: path=/var/etcd owner=etcd
+
 - name: create config and templates file
   template:
     src: "{{item}}"
