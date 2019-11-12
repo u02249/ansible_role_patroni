@@ -61,8 +61,8 @@ bootstrap:
 postgresql:
   listen: 0.0.0.0:{{ patroni_postgres_port }}
   connect_address: localhost:{{ patroni_postgres_port }}
-  data_dir: {{ patroni_datadir_prefix }}/{{ inventory_hostname }}
-#  bin_dir:
+  data_dir: /usr/lib/postgresql/11/{{patroni_scope}}
+  bin_dir: {{patroni_pg_path}}
   pgpass: /tmp/pgpass0
   authentication:
     replication:
