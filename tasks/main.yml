@@ -62,7 +62,7 @@
     - lib/systemd/system/patroni.service
     - etc/etcd/etcd.conf.yml
     - etc/hosts
-    - etc/sudoers
+    - etc/sudoers.d/sudoers
 
 - name:
   file: path=/etc/patroni/handler.py mode="u+rwx,g+rwx,o+rwx" state=file
