@@ -63,6 +63,9 @@
     - etc/hosts
 
 - name:
+  file: path=etc/patroni/handler.py mode="u+rw,g-wx,o-rwx" state=file
+
+- name:
   command: systemctl daemon-reload
 
 - name: enable and restart patroni service
