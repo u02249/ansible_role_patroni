@@ -11,5 +11,7 @@ patroni_pg_path: /usr/lib/postgresql/11/bin
 patroni_admin_password: SD56bn78!
 patroni_datadir_prefix: aparu
 patroni_pg_datadir: /var/lib/postgresql/11/aparu_data
-patroni_dev_name: ens4
+patroni_add_ip_cmd: ip addr add 10.128.0.10/32 dev ens4
+patroni_del_ip_cmd: ip addr del 10.128.0.10/32 dev ens4
+patroni_arping_cmd: arping -q -c 3 -A -I ens4 10.128.0.10
 etcd_ip: localhost
