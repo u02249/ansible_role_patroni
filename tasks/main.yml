@@ -10,13 +10,6 @@
     repo: deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
     state: present
 
-- name: Add permisions to change ip addr
-  blockinfile:
-    path: "/etc/sudoers"
-    block: |
-      user ALL = (root) NOPASSWD: {{patroni_add_ip_cmd}}
-      user ALL = (root) NOPASSWD: {{patroni_del_ip_cmd}}
-      user ALL = (root) NOPASSWD: {{patroni_arping_cmd}}
 
 - name: install postgresql, etcd, 
   apt:
@@ -69,6 +62,7 @@
     - lib/systemd/system/patroni.service
     - etc/etcd/etcd.conf.yml
     - etc/hosts
+    - etc/sudoers
 
 - name:
   file: path=/etc/patroni/handler.py mode="u+rwx,g+rwx,o+rwx" state=file
