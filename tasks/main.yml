@@ -27,6 +27,15 @@
     enabled: no
     state: stopped
 
+- name: state main directory
+  stat: path=/var/lib/postgresql/11/main
+  register: pg_main_data_dir_stat
+
+- name: rename old data directory
+  command: mv /var/lib/postgresql/11/main /var/lib/postgresql/11/main_old
+  when: pg_main_data_dir_stat.stat.exists
+
+
 - name: ansible create config directory patroni
   file:
     path: /etc/patroni
