@@ -75,6 +75,8 @@ postgresql:
       password: {{ patroni_postgres_password }}
   parameters:
     unix_socket_directories: '.'
+  callbacks:
+    on_role_change: /etc/on_role_change.py
 tags:
     nofailover: false
     noloadbalance: false
