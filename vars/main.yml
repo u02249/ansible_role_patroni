@@ -10,4 +10,5 @@ patroni_postgres_password: SD56bn78!
 patroni_pg_path: /usr/lib/postgresql/11/bin
 patroni_admin_password: SD56bn78!
 patroni_datadir_prefix: aparu
+patroni_pg_datadir: /var/lib/postgresql/11/aparu_data
 etcd_ip: localhost
