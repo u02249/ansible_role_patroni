@@ -58,6 +58,7 @@
     - etc/patroni/config.yml
     - etc/patroni/handler.py
     - lib/systemd/system/etcd.service
+    - lib/systemd/system/patroni.service
     - etc/etcd/etcd.conf.yml
     - etc/hosts
 
