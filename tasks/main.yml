@@ -22,9 +22,10 @@
       - patroni
 
 - name: disable postgresql service
-  name: postgresql@11-main
-  enabled: no
-  state: stoped
+  service:
+    name: postgresql@11-main
+    enabled: no
+    state: stoped
 
 - name: ansible create config directory patroni
   file:
