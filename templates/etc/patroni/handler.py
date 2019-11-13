@@ -28,7 +28,7 @@ class EvenHandler(object):
                 self.del_ip()
             
         except:
-            logger.warning("Проблема с установкой IP")
+            logger.warning("Error to change ip")
             return False
         return True
 
