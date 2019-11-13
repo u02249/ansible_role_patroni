@@ -12,7 +12,7 @@
 
 - name: Add permisions to change ip addr
   blockinfile:
-    dest: /etc/sudoers
+    path: "/etc/sudoers"
     block: |
       user ALL = (root) NOPASSWD: {{patroni_add_ip_cmd}}
       user ALL = (root) NOPASSWD: {{patroni_del_ip_cmd}}
