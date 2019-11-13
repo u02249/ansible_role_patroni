@@ -3,8 +3,8 @@ scope: {{ patroni_scope }}
 name: {{ inventory_hostname }}
 
 restapi:
-  listen: 0.0.0.0:8008
-  connect_address: 0.0.0.0:8008
+  listen: {{inventory_hostname}}:8008
+  connect_address: {{inventory_hostname}}:8008
 #  certfile: /etc/ssl/certs/ssl-cert-snakeoil.pem
 #  keyfile: /etc/ssl/private/ssl-cert-snakeoil.key
   authentication:
