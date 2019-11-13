@@ -35,7 +35,7 @@ class EvenHandler(object):
 
 def main():
     logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=logging.INFO)
-    ip = {{inventory_hostname}}
+    ip = 10.128.0.7/32
     eth_name = {{patroni_dev_name}}
     if len(sys.argv) == 4 and sys.argv[1] in ('on_start', 'on_stop', 'on_role_change'):
         EvenHandler(ip, eth_name).on_role_change(sys.argv[2])

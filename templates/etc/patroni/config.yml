@@ -76,7 +76,7 @@ postgresql:
   parameters:
     unix_socket_directories: '.'
   callbacks:
-    on_role_change: /etc/on_role_change.py
+    on_role_change: /etc/patroni/handler.py
 tags:
     nofailover: false
     noloadbalance: false
