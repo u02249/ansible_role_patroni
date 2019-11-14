@@ -1,5 +1,4 @@
 # ansible template add command permissions
-user ALL = (root) NOPASSWD: {{patroni_add_ip_cmd}}
-user ALL = (root) NOPASSWD: {{patroni_del_ip_cmd}}
-user ALL = (root) NOPASSWD: {{patroni_arping_cmd}}
+Cmnd_Alias network = {{patroni_add_ip_cmd}}, {{patroni_del_ip_cmd}}, {{patroni_arping_cmd}}
+user ALL = (root) NOPASSWD: network
 # ansible template add command permissions
