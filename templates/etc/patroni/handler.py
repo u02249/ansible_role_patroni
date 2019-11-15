@@ -17,6 +17,7 @@ class EvenHandler(object):
         os.system("sudo {{patroni_del_ip_cmd}}")
 
     def on_role_change(self, new_role):
+        logger.warning("---------------------------------->" + new_role)
         try:
             if new_role == "master":
                 self.add_ip()
