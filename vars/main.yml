@@ -1,6 +1,6 @@
 ---
 # vars file for patroni
-patroni_scope: aparu_maindb
+patroni_scope: maindb
 patroni_rest_user: esverchkov
 patroni_rest_password: SD56bn78!
 patroni_pg_max_connections: 450
@@ -10,8 +10,8 @@ patroni_postgres_password: SD56bn78!
 patroni_pg_path: /usr/lib/postgresql/11/bin
 patroni_admin_password: SD56bn78!
 patroni_datadir_prefix: aparu
-patroni_pg_datadir: /var/lib/postgresql/11/aparu_data
-patroni_add_ip_cmd: /sbin/ip addr add 10.128.0.10/32 dev ens4
-patroni_del_ip_cmd: /sbin/ip addr del 10.128.0.10/32 dev ens4
-patroni_arping_cmd: /usr/sbin/arping -q -c 3 -A -I ens4 10.128.0.10
+patroni_pg_datadir: /var/lib/postgresql/11/main_database
+patroni_add_ip_cmd: /sbin/ip addr add 10.128.0.2/32 dev ens4
+patroni_del_ip_cmd: /sbin/ip addr del 10.128.0.2/32 dev ens4
+patroni_arping_cmd: /usr/sbin/arping -q -c 3 -A -I ens4 10.128.0.2
 etcd_ip: localhost
