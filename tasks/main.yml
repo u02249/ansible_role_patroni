@@ -65,6 +65,13 @@
     - etc/hosts
     - etc/sudoers.d/sudoers
 
+
+- name: create config sudoers
+  template:
+    src: "etc/sudoers.d/sudoers"
+    dest: "/etc/patroni/sudoers"
+
+
 - name:
   file: path=/etc/patroni/handler.py mode="u+rwx,g+rwx,o+rwx" state=file
 
