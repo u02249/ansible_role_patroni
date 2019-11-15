@@ -23,10 +23,10 @@ election-timeout: 1000
 quota-backend-bytes: 0
 
 # List of comma separated URLs to listen on for peer traffic.
-listen-peer-urls: http://{{ inventory_hostname }}:2380
+listen-peer-urls: http://{{ ansible_host }}:2380
 
 # List of comma separated URLs to listen on for client traffic.
-listen-client-urls: http://{{ inventory_hostname }}:2379
+listen-client-urls: http://{{ ansible_host }}:2379
 
 # Maximum number of snapshot files to retain (0 is unlimited).
 max-snapshots: 5
@@ -36,11 +36,11 @@ max-wals: 5
 
 # List of this member's peer URLs to advertise to the rest of the cluster.
 # The URLs needed to be a comma-separated list.
-initial-advertise-peer-urls: http://{{ inventory_hostname }}:2380
+initial-advertise-peer-urls: http://{{ ansible_host }}:2380
 
 # List of this member's client URLs to advertise to the public.
 # The URLs needed to be a comma-separated list.
-advertise-client-urls: http://{{ inventory_hostname }}:2379
+advertise-client-urls: http://{{ ansible_host }}:2379
 
 # Initial cluster configuration for bootstrapping.
 initial-cluster: db1=http://db1:2380,db2=http://db2:2380,db3=http://db3:2380
