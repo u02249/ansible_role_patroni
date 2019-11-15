@@ -21,6 +21,7 @@
       - etcd
       - python-etcd
       - patroni
+      - arping
 
 - name: disable postgresql service
   service:

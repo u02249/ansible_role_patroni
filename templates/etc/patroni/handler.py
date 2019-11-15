@@ -9,12 +9,12 @@ class EvenHandler(object):
 
     def add_ip(self):
         logger.warning("add ip {{patroni_add_ip_cmd}}")
-        os.system("{{patroni_add_ip_cmd}}")
-        os.system("{{patroni_arping_cmd}}")
+        os.system("sudo {{patroni_add_ip_cmd}}")
+        os.system("sudo {{patroni_arping_cmd}}")
 
     def del_ip(self):
         logger.warning("del ip {{patroni_del_ip_cmd}}")
-        os.system("{{patroni_del_ip_cmd}}")
+        os.system("sudo {{patroni_del_ip_cmd}}")
 
     def on_role_change(self, new_role):
         try:
@@ -32,7 +32,7 @@ def main():
     ip = "10.128.0.7"
     eth_name = "ens4"
     if len(sys.argv) == 4 and sys.argv[1] in ('on_start', 'on_stop', 'on_role_change'):
-        EvenHandler(ip, eth_name).on_role_change(sys.argv[2])
+        EvenHandler().on_role_change(sys.argv[2])
     else:
         sys.exit("Usage: {0} action role name".format(sys.argv[0]))
 
